@@ -49,6 +49,8 @@ export async function getFlutter(
   core.addPath(path.join(toolPath, 'bin'));
   core.addPath(path.join(toolPath, 'bin', 'cache', 'dart-sdk', 'bin'));
 
+  core.addPath('/Users/dennis/.fastlane/bin');
+
   if (useMaster) {
     await exec.exec('flutter', ['channel', 'master']);
     await exec.exec('flutter', ['upgrade']);
